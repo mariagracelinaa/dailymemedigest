@@ -3,6 +3,7 @@ import 'dart:html';
 
 import 'package:dailymemedigest_160419024_160719022/class/Meme.dart';
 import 'package:dailymemedigest_160419024_160719022/main.dart';
+import 'package:dailymemedigest_160419024_160719022/screen/addreport.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -136,7 +137,13 @@ class _DetailMemesState extends State<DetailMemes> {
                                   size: 30,
                                   color: Color.fromARGB(255, 156, 135, 133),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => AddReport(
+                                                memesID: _m!.id)));
+                                },
                               ),
                             ],
                           )
